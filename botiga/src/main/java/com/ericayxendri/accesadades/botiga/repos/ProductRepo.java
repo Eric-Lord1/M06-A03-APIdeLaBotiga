@@ -10,7 +10,7 @@ import java.util.Set;
 import com.ericayxendri.accesadades.botiga.models.Product;
 
 @Repository
-public interface ProductRepository extends JpaRepository {
+public interface ProducteRepo extends JpaRepository {
 
     @Override
     @NonNull

@@ -6,9 +6,11 @@ import java.util.Locale.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 
-public interface SubCategoryRepository extends JpaRepository {
+import com.ericayxendri.accesadades.botiga.models.Subcategoria;
+
+public interface SubcategoriaRepo extends JpaRepository {
     @Override
     @NonNull
-    List<SubCategory> findAll();
-    SubCategory findByName(String subcategory);
+    List<Subcategoria> findAll();
+    Subcategoria findByName(String subcategory);
 }
