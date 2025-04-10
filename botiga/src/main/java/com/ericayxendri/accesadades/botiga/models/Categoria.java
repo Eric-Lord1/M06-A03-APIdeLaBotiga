@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.cglib.core.Local;
 
@@ -17,7 +18,7 @@ import org.springframework.cglib.core.Local;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Categoria;
+    private long id_Categoria;
 
     @Column
     private String desc_Categoria;
@@ -25,8 +26,8 @@ public class Categoria {
     @Column
     private String status_Categoria;
 
-    @Column
-    private Subcategoria subcategoria;
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+    private List<Subcategoria> subcategorias;
 
     @Column
     private LocalDateTime creation_at;
