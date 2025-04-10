@@ -4,13 +4,13 @@ Eric Ayxendri
 -------------
 * 4a
 * 7
-* 8
+* 9
 * 10 g, h, i
 
 Alex Borda
 ----------
 * 5
-* 9
+* 8
 * 10 d, e, f
 
 Pau Hernandez
