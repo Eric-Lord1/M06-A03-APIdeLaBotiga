@@ -24,7 +24,7 @@ public class WebController {
  
     @RequestMapping(value = "/catalog")
     public String catalog(Model model) {
-        List products = (List) productService.findAllProducts();
+        List products = (List) productService.findAll();
         model.addAttribute("products", products);
         return "catalog";
     }
@@ -32,7 +32,7 @@ public class WebController {
     @RequestMapping(value = {"/search", "/prodname"}, method = {RequestMethod.GET, RequestMethod.POST})
     public String searchProductByName(@RequestParam(value = "name", required = false) String name, Model model) {
         if (name != null) {
-            Product product = productService.findProductsByName(name);
+            Product product = productService.findByName(name);
             model.addAttribute("product", product);
         }
         return "search";

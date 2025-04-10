@@ -16,6 +16,5 @@ public interface SubcategoriaRepo extends JpaRepository<Subcategoria, Long> {
     @Override
     @NonNull
     List<Subcategoria> findAll();
-    
     Subcategoria findByName(String name);
 }

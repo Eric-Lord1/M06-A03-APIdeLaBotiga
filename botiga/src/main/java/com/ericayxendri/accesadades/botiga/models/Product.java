@@ -32,7 +32,4 @@ public class Product implements Serializable{
     @Column
     private String subcategory;
 
-/*     @ManyToOne(cascade=CascadeType.PERSIST)
-    @JoinColumn(name="subcategory_id")
-    private Subcategory subcategory;    */ 
 }
