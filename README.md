@@ -2,7 +2,6 @@
 
 Eric Ayxendri
 -------------
-* 9
 * 10 g, h, i
 
 Alex Borda
