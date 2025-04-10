@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoriaDTO {
     private Long id;
-    private String descripcion;
+    private String name;
     private String estado;
     private LocalDateTime creado;
     private LocalDateTime actualizado;

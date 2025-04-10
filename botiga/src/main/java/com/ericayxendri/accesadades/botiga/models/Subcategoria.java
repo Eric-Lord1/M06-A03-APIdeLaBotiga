@@ -2,9 +2,6 @@ package com.ericayxendri.accesadades.botiga.models;
 
 import java.time.LocalDateTime;
 
-import org.hibernate.annotations.ManyToAny;
-
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,7 +25,7 @@ public class Subcategoria {
     private long id_Subcategoria;
 
     @Column
-    private String desc_Subcategoria;
+    private String name;
 
     @Column
     private String status_Categoria;

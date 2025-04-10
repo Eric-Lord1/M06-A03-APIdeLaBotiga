@@ -1,5 +1,6 @@
 package com.ericayxendri.accesadades.botiga.controllers;
 
+import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ericayxendri.accesadades.botiga.models.Product;
 import com.ericayxendri.accesadades.botiga.services.ProductService;
-import java.util.Set;
 
 @Controller
 public class WebController {
@@ -24,7 +24,7 @@ public class WebController {
  
     @RequestMapping(value = "/catalog")
     public String catalog(Model model) {
-        Set<Product> products = productService.findAllProducts();
+        List products = (List) productService.findAllProducts();
         model.addAttribute("products", products);
         return "catalog";
     }
@@ -35,7 +35,7 @@ public class WebController {
             Product product = productService.findProductsByName(name);
             model.addAttribute("product", product);
         }
-        return "search"; // Referencia a search.html en el directorio templates
+        return "search";
     }
 }
 

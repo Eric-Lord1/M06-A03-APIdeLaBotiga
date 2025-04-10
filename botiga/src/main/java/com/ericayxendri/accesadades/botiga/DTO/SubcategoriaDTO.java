@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class SubcategoriaDTO {
     private Long id;
-    private String descripcion;
+    private String name;
     private String estado;
     private LocalDateTime creado;
     private LocalDateTime actualizado;

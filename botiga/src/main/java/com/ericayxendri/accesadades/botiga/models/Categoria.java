@@ -2,13 +2,8 @@ package com.ericayxendri.accesadades.botiga.models;
 
 import lombok.*;
 import jakarta.persistence.*;
-
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-
-import org.springframework.cglib.core.Local;
 
 @Data
 @AllArgsConstructor
@@ -21,7 +16,7 @@ public class Categoria {
     private long id_Categoria;
 
     @Column
-    private String desc_Categoria;
+    private String name;
 
     @Column
     private String status_Categoria;

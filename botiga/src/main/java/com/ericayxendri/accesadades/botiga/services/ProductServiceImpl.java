@@ -2,23 +2,24 @@ package com.ericayxendri.accesadades.botiga.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Set;
+
+import java.util.List;
 import com.ericayxendri.accesadades.botiga.models.Product;
-import com.ericayxendri.accesadades.botiga.repos.ProductRepository;
+import com.ericayxendri.accesadades.botiga.repos.ProducteRepo;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProducteRepo productRepository;
 
     @Override
-    public Set<Product> findAllProducts() {
+    public List<Product> findAllProducts() {
         return productRepository.findAll();
     }
 
     @Override
-    public Set<Product> findAllProducts(String subcategory) {
+    public List<Product> findAllProducts(String subcategory) {
         return null;
     }
 
