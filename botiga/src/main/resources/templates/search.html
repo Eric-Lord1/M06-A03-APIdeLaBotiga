@@ -1,39 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <title>Formulari de cerca</title>
-    <link th:href="@{/styles/style_search.css}" rel="stylesheet" />
+    <title>Cercar Productes</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1>Cerca de productes per nom</h1>
-    <form action="#" th:action="@{/prodname}" th:object="${prodname}" th:method="post">
-        <label for="name">Paràmetre:</label>
-        <input type="text" id="name" name="name" required>
-        <button type="submit">Cerca</button>
-    </form>
-    <div th:if="${product}">
-        <table>
-            <tr>
-                <th>Id del producte</th>
-                <th>Nom</th>
-                <th>Descripció</th>
-                <th>Subcategoria</th>
-                <th>Unitats en estoc</th>
-                <th>Preu unitat</th>
-                <th>Fabricant</th>
-            </tr>
-            <tr>
-                <td th:text="${product.product_id}"></td>
-                <td th:text="${product.name}"></td>
-                <td th:text="${product.description}"></td>
-                <td th:text="${product.subcategory}"></td>
-                <td th:text="${product.units}"></td>
-                <td th:text="${product.price}"></td>
-                <td th:text="${product.company}"></td>
-            </tr>
-        </table>
+    <div class="container">
+        <h1 class="title">Cerca de Productes</h1>
+        <a href="/" class="back-link">🏠 Tornar a l'inici</a>
+
+        <form method="get" action="/producte/search">
+            <input type="text" name="name" placeholder="Introdueix el nom..." required>
+            <button type="submit">🔍 Cercar</button>
+        </form>
+
+        <div th:if="${resultats != null}">
+            <h2>Resultats:</h2>
+            <ul>
+                <li th:each="p : ${resultats}" th:text="|${p.name} - ${p.price} €|">...</li>
+            </ul>
+        </div>
     </div>
-    <p><a class="nav-link" th:href="@{/}">Torna a la pàgina d'inici</a></p>
 </body>
 </html>

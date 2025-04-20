@@ -1,0 +1,111 @@
+body {
+    background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffcc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    margin: 5% auto;
+    width: 75%;
+    padding: 20px;
+    background-color: #111111aa;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ffcc44;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00ffcc;
+    margin-bottom: 1em;
+}
+
+.links a {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #111;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background-color: #00ffcc;
+    color: #111;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: #00ffcc;
+    text-decoration: none;
+    border: 1px solid #00ffcc;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.back-link:hover {
+    background-color: #00ffcc;
+    color: #000;
+}
+
+input,
+button,
+select {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #00ffcc;
+    background-color: #000;
+    color: #00ffcc;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+button:hover {
+    outline: none;
+    background-color: #00ffcc22;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 1em;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #00ffcc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-table th {
+    background-color: #111;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+.product-table tr:hover {
+    background-color: #00ffcc22;
+}

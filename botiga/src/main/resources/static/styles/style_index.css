@@ -1,25 +1,38 @@
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffcc;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: #007bff;
+.container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10%;
 }
 
-p {
-    text-align: center;
-    font-size: 18px;
+.title {
+    font-size: 3em;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00ffcc;
+    margin-bottom: 1em;
 }
 
-a {
-    color: #007bff;
+.links a {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #111;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+.links a:hover {
+    background-color: #00ffcc;
+    color: #111;
+    box-shadow: 0 0 10px #00ffcc;
 }

@@ -12,5 +12,6 @@ public interface CategoriaRepo extends JpaRepository<Categoria, Long> {
     @Override
     @NonNull
     List<Categoria> findAll();
+    
     Categoria findByName(String category);
 }

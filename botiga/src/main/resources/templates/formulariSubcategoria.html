@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Afegir Subcategoria</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Nova Subcategoria</h1>
+        <a href="/" class="back-link">🏠 Tornar a l'inici</a>
+
+        <form th:action="@{/subcategoria/formulari}" th:object="${subcategoriaForm}" method="post">
+            <input type="text" th:field="*{name}" placeholder="Nom" required>
+            <input type="text" th:field="*{status}" placeholder="Estat" required>
+            <input type="text" th:field="*{categoria.name}" placeholder="Nom de la Categoria" required>
+            <br>
+            <br>
+            <br>
+            <button type="submit">💾 Afegir</button>
+        </form>
+    </div>
+</body>
+</html>

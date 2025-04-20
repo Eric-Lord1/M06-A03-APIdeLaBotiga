@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="UTF-8">
-        <title>Catàleg de productes</title>
-        <link th:href="@{/styles/style_catalog.css}" rel="stylesheet" />
-    </head>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Catàleg de Productes</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
 <body>
-    <h1>Catàleg de productes</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Id del producte</th>
-                <th>Nom</th>
-                <th>Descripció</th>
-                <th>Subcategoria</th>
-                <th>Unitats en estoc</th>
-                <th>Preu unitat</th>
-                <th>Fabricant</th>
-            </tr>
-        </thead>
-        <tbody th:each="product : ${products}">
-            <tr>
-                <td th:text="${product.product_id}"></td>
-                <td th:text="${product.name}"></td>
-                <td th:text="${product.description}"></td>
-                <td th:text="${product.subcategory}"></td>
-                <td th:text="${product.units}"></td>
-                <td th:text="${product.price}"></td>
-                <td th:text="${product.company}"></td>
-            </tr>
-        </tbody>
-    </table>
-    <p><a class="nav-link" th:href="@{/}">Torna a la pàgina d'inici</a></p>
+    <div class="container">
+        <h1 class="title">Catàleg de Productes</h1>
+
+        <div class="links">
+            <a href="/">🏠 Tornar a l'inici</a>
+            <a href="/producte/formulari">➕ Nou Producte</a>
+            <a href="/producte/search">🔍 Cercar Producte</a>
+        </div>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Preu (€)</th>
+                    <th>Descripció</th>
+                    <th>Companyia</th>
+                    <th>Unitats</th>
+                    <th>Subcategoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p : ${products}">
+                    <td th:text="${p.name}">Nom</td>
+                    <td th:text="${p.price}">0.0</td>
+                    <td th:text="${p.description}">...</td>
+                    <td th:text="${p.company}">...</td>
+                    <td th:text="${p.units}">0</td>
+                    <td th:text="${p.subcategoria.name}">...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

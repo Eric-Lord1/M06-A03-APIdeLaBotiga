@@ -1,4 +1,4 @@
-package com.ericayxendri.accesadades.botiga.DTO;
+package com.ericayxendri.accesadades.botiga.Dto;
 
 
 import lombok.AllArgsConstructor;
@@ -10,10 +10,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductDTO {
+
     private String name;
+
     private String description;
+
     private String company;
-    private Float price;
+
+    private Double price;
+
     private Long units;
-    private String subcategory;
+
+    private SubcategoriaDTO subcategoria;
+
 }

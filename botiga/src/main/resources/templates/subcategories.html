@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Subcategories</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Subcategories</h1>
+
+        <div class="links">
+            <a href="/">🏠 Tornar a l'inici</a>
+            <a href="/subcategoria/formulari">➕ Nova Subcategoria</a>
+        </div>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Estat</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="s : ${subcategories}">
+                    <td th:text="${s.name}">Nom</td>
+                    <td th:text="${s.status}">Activa</td>
+                    <td th:text="${s.categoria.name}">Categoria</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

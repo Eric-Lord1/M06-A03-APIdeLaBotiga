@@ -40,11 +40,11 @@ public class ProductService implements IService<Product, Long> {
         return productRepository.findByName(name);
     }
 
-    public List<Product> findByNameContaining(String nom) {
-        return productRepository.findByNomContainingIgnoreCase(nom);
+    public List<Product> findByNameContaining(String name) {
+        return productRepository.findByNameContainingIgnoreCase(name);
     }
     
-    public boolean updateProductPrice(Long id, Long nouPreu) {
+    public boolean updateProductPrice(Long id, double nouPreu) {
         Optional<Product> optionalProduct = productRepository.findById(id);
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
