@@ -39,14 +39,11 @@ L'estructura segueix el patró clàssic de Spring Boot:
 
 ---
 
-## ✅ Proves d'execució (a completar per l'alumne)
+## ✅ Proves d'execució
 
 > En aquest apartat s'han d'incloure captures de pantalla, passos d'execució i proves funcionals que demostren el funcionament del projecte.
 
-- ✅ Prova: Accedir a la ruta `/producte` i verificar que es mostren els productes  
-- ⬜ Prova: Cercar un producte existent per nom  
-- ⬜ Prova: Afegir una nova categoria i verificar que apareix  
-- ⬜ Prova: Verificar la relació entre categories i subcategories  
+- ✅ Prova: Accedir a la ruta `/producte` i verificar que es mostren els productes
 
 ---
 
