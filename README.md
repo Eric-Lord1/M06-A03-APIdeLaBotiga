@@ -34,9 +34,10 @@ L'estructura segueix el patró clàssic de Spring Boot:
 - `/producte` – Llistar productes  
 - `/producte/search` – Cercar per nom  
 - `/producte/formulari` – Afegir producte  
-- `/categoria` – Llistar categories  
-- `/subcategoria` – Llistar subcategories  
-
+- `/categoria` – Llistar categories
+- `/categoria/formulari` – Afegir categories  
+- `/subcategoria` – Llistar subcategories
+- `/subcategoria/formulari` – Afegir subcategories
 ---
 
 ## ✅ Proves d'execució
@@ -49,13 +50,11 @@ L'estructura segueix el patró clàssic de Spring Boot:
 
 ## ℹ️ Notes addicionals
 
-- La BBDD s'ha de crear manualment o inicialitzar amb scripts `insert.sql`  
-- Els DTO s'utilitzen per evitar recursivitat infinita entre entitats relacionades  
+- La BBDD s'ha de crear manualment i inicialitzar amb scripts `insert.sql`  
 - MapStruct s'ha usat per mapejar entre entitats i DTOs de forma eficient  
 
 ---
 
-## 🎓 Autor
+## 🎓 Autors
 
-Treball realitzat per a l'assignatura d'Accés a Dades.
-
+Eric, Alex and Pau
