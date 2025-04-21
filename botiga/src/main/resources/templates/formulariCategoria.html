@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Afegir Categoria</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Nova Categoria</h1>
+        <a href="/" class="back-link">🏠 Tornar a l'inici</a>
+
+        <form th:action="@{/categoria/formulari}" th:object="${categoriaForm}" method="post">
+            <input type="text" th:field="*{name}" placeholder="Nom" required>
+            <input type="text" th:field="*{status}" placeholder="Estat (Activa/Inactiva)" required>
+            <br>
+            <br>
+            <br>
+            <button type="submit">💾 Afegir</button>
+        </form>
+    </div>
+</body>
+</html>

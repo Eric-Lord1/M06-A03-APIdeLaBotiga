@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name="Categoria")
 public class Categoria {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_Categoria;
@@ -19,7 +20,7 @@ public class Categoria {
     private String name;
 
     @Column
-    private String status_Categoria;
+    private String status;
 
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Subcategoria> subcategorias;

@@ -1,31 +1,40 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-h1 {
-    color: #ff4633;
-    text-align: center;
-    margin-top: 50px;
-}
-
-table {
-    width: 50%;
-    margin: 20px auto;
+.product-table {
+    width: 90%;
+    margin: 30px auto;
     border-collapse: collapse;
+    font-size: 1em;
+    box-shadow: 0 0 15px #00ffcc;
 }
-th, td {
+
+.product-table th,
+.product-table td {
+    border: 1px solid #00ffcc;
     padding: 10px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-p {
     text-align: center;
-    font-size: 18px;
+}
+
+.product-table th {
+    background-color: #111;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+.product-table tr:hover {
+    background-color: #00ffcc22;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: #00ffcc;
+    text-decoration: none;
+    border: 1px solid #00ffcc;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.back-link:hover {
+    background-color: #00ffcc;
+    color: #000;
 }

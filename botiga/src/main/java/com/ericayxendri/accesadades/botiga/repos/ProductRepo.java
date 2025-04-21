@@ -8,19 +8,18 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 
 import java.util.List;
-
+import java.util.Set;
 
 @Repository
-public interface ProducteRepo extends JpaRepository<Product, Long> {
+public interface ProductRepo extends JpaRepository<Product, Long> {
 
     @Override
     @NonNull
-    List<Product> findAll(); 
+    List<Product> findAll();
 
     Product findByName(String name);
 
-    List<Product> findByNameAndPrice(String name, float price);
+    Set<Product> findByNameAndPrice(String name, float price);
     
     List<Product> findByNameContainingIgnoreCase(String name);
-
 }

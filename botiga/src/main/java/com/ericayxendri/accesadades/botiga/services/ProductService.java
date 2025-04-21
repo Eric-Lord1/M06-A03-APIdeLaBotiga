@@ -1,12 +1,60 @@
 package com.ericayxendri.accesadades.botiga.services;
 
-import java.util.List;
-import com.ericayxendri.accesadades.botiga.models.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface ProductService {
- 
-    List<Product> findAllProducts();
-    Product findProductsByName(String name);
-    List<Product> findAllProducts(String subcategory);
-    void increasePrice(Product product);
+import java.util.List;
+import java.util.Optional;
+
+import com.ericayxendri.accesadades.botiga.models.Product;
+import com.ericayxendri.accesadades.botiga.repos.ProducteRepo;
+@Service
+public class ProductService implements IService<Product, Long> {
+
+    @Autowired
+    private ProducteRepo productRepository;
+
+
+    @Override
+    public List<Product> findAll() {
+        return productRepository.findAll();
+    }
+
+    @Override
+    public Optional<Product> findById(Long id) {
+        return productRepository.findById(id);
+    }
+
+    @Override
+    public Product save(Product entity) {
+        return productRepository.save(entity);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        productRepository.deleteById(id);
+    }
+
+
+    public Product findByName(String name) {
+        return productRepository.findByName(name);
+    }
+
+    public List<Product> findByNameContaining(String name) {
+        return productRepository.findByNameContainingIgnoreCase(name);
+    }
+    
+    public boolean updateProductPrice(Long id, double nouPreu) {
+        Optional<Product> optionalProduct = productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            product.setPrice(nouPreu);
+            productRepository.save(product);
+            return true;
+        }
+        return false;
+    }
+
+    
+
 }

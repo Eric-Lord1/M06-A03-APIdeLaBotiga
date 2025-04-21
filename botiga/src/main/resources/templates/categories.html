@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Llista de Categories</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Categories</h1>
+        
+        <div class="links">
+            <a href="/">🏠 Tornar a l'inici</a>
+            <a href="/categoria/formulari">➕ Nova Categoria</a>
+        </div>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Estat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="c : ${categories}">
+                    <td th:text="${c.name}">Nom</td>
+                    <td th:text="${c.status}">Activa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

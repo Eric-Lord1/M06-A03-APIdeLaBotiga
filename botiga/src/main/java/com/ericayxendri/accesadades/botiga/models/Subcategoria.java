@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "Subcategoria")
 public class Subcategoria {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_Subcategoria;
@@ -28,7 +29,7 @@ public class Subcategoria {
     private String name;
 
     @Column
-    private String status_Categoria;
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")

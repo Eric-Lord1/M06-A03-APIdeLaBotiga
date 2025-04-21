@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Afegir Producte</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Nou Producte</h1>
+        <a href="/" class="back-link">🏠 Tornar a l'inici</a>
+
+        <form th:action="@{/producte/formulari}" th:object="${producteForm}" method="post">
+            <input type="text" th:field="*{name}" placeholder="Nom" required>
+            <input type="text" th:field="*{description}" placeholder="Descripció" required>
+            <input type="text" th:field="*{company}" placeholder="Companyia" required>
+            <input type="number" step="0.01" th:field="*{price}" placeholder="Preu" required>
+            <input type="number" th:field="*{units}" placeholder="Unitats" required>
+            <input type="text" th:field="*{subcategoria.name}" placeholder="Nom subcategoria" required>
+            <br>
+            <br>
+            <br>
+            <button type="submit">💾 Afegir</button>
+        </form>
+    </div>
+</body>
+</html>
