@@ -17,4 +17,9 @@ public interface SubcategoriaRepo extends JpaRepository<Subcategoria, Long> {
     List<Subcategoria> findAll();
 
     Subcategoria findByName(String name);
+
+    List<Subcategoria> findByNameContaining(String status);
+
+    List<Subcategoria> findByStatus(String status);
+
 }

@@ -30,4 +30,5 @@ public class Categoria {
 
     @Column
     private LocalDateTime updated_at;
+    
 }

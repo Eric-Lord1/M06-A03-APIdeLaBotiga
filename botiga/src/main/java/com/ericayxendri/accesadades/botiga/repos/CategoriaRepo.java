@@ -13,5 +13,10 @@ public interface CategoriaRepo extends JpaRepository<Categoria, Long> {
     @NonNull
     List<Categoria> findAll();
     
-    Categoria findByName(String category);
+    Categoria findByName(String name);
+
+    List<Categoria> findByNameContaining(String name);
+
+    List<Categoria> findByStatus(String status);
+
 }

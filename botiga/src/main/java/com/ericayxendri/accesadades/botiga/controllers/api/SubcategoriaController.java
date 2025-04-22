@@ -31,6 +31,18 @@ class SubcategoriaController {
         return ResponseEntity.ok(dtos);
     }
 
+    @GetMapping("/name")
+    public ResponseEntity<List<SubcategoriaDTO>> getByNom(@RequestParam String name) {
+        List<Subcategoria> categories = subcategoriaService.findByNameMatch(name);
+        return ResponseEntity.ok(categories.stream().map(mapper::toSubcategoriaDTO).toList());
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<List<SubcategoriaDTO>> getByStatus(@RequestParam String status) {
+        List<Subcategoria> result = subcategoriaService.findByStatus(status);
+        return ResponseEntity.ok(result.stream().map(mapper::toSubcategoriaDTO).toList());
+    }
+
     @PostMapping("/postSubcategoria")
     public ResponseEntity<SubcategoriaDTO> inserirSubcategoria(@RequestBody SubcategoriaDTO dto) {
         Subcategoria entitat = mapper.toSubcategoria(dto);

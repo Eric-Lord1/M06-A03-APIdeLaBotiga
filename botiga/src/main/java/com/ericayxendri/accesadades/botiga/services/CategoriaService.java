@@ -38,5 +38,13 @@ public class CategoriaService implements IService<Categoria, Long> {
     public Categoria findByName(String category) {
         return categoriaRepo.findByName(category);
     }
+
+    public List<Categoria> findByNameMatch(String category) {
+        return categoriaRepo.findByNameContaining(category);
+    }
+
+    public List<Categoria> findByStatus(String status) {
+        return categoriaRepo.findByStatus(status);
+    }
 }
 

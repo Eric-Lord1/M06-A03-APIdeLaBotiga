@@ -32,6 +32,18 @@ public class CategoriaController {
         return ResponseEntity.ok(dtos);
     }
 
+    @GetMapping("/name")
+    public ResponseEntity<List<CategoriaDTO>> getByNom(@RequestParam String name) {
+        List<Categoria> categories = categoriaService.findByNameMatch(name);
+        return ResponseEntity.ok(categories.stream().map(mapper::toCategoriaDTO).toList());
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<List<CategoriaDTO>> getByStatus(@RequestParam String status) {
+        List<Categoria> result = categoriaService.findByStatus(status);
+        return ResponseEntity.ok(result.stream().map(mapper::toCategoriaDTO).toList());
+    }
+
     @PostMapping("/postCategoria")
     public ResponseEntity<CategoriaDTO> inserirCategoria(@RequestBody CategoriaDTO dto) {
         Categoria entitat = mapper.toCategoria(dto);
