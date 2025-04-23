@@ -93,7 +93,15 @@ Si els accionem podem veure com la url canvia en el cas del Post: http://localho
 
 Ara accionem guardar i tindriem que visualitzar-ho al /producte el producte afegit:
 
+![image](https://github.com/user-attachments/assets/92c58b1e-faac-46de-855e-5e8587228a88)
 
+En cas de accionar el botó de cerca de producte la url serà: http://localhost:8080/producte/search
+
+I el que veurem és això:
+
+![image](https://github.com/user-attachments/assets/779a8e02-8b8b-4d5b-9b4b-993fca689727)
+
+Exactament tenim el mateix en categories i subcategories.
 
 ---
 
